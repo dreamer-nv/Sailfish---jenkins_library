@@ -1,4 +1,5 @@
 def call(Map args) {
+	echo "callingBuildFrameworkHTTP Function"
 	def responseGET = httpRequest url: "http://${args.hostname}:${args.port}/sap/bc/${args.external_alias}/sync?", 
 							   authentication: args.credentials, 
 							   httpMode: 'GET', 
