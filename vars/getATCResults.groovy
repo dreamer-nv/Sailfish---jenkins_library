@@ -9,5 +9,5 @@ def call(Map args) {
     echo 'ATC Results : '+ resp.content
     //junit testResults:'results/ABAP_'+args.hostname+'_aunit_result_*.xml'
     //checkstyle canComputeNew: false, defaultEncoding: '', unstableTotalHigh: '', healthy: '', pattern: 'results/ABAP_'+args.hostname+'_atc_result_*.xml', unHealthy: ''
-    recordIssues(tools: [checkStyle(pattern: 'results/ABAP_'+args.hostname+'_atc_result_*.xml')])
+    recordIssues(tools: [checkStyle(pattern: 'results/ABAP_'+args.hostname+'_atc_result_'+env.BUILD_NUMBER+'.xml')])
 }
